@@ -1,3 +1,14 @@
+## Picture download
+
+To get images of hornets into /data/hornets, you have to run the following commands. Warning: it may take a long time to download all pictures.
+
+```pip install requests```
+
+```python scripts/download_hornets.py```
+
+GBIF.org (06 November 2025) GBIF Occurrence Download  https://doi.org/10.15468/dl.g79yt3
+
+## Task description
 Problem statement: 
 Hornet attacks pose a serious threat to beekeepers and their colonies. These aggressive insects can quickly destroy entire bee colonies within hours, reducing honey production and weakening hives. Early detection is critical, but traditional monitoring methods are slow and unreliable. The goal of this project is to develop an automated detection system that can identify hornets in video footage or images captured at beehive entrances. Such a system could help alert beekeepers early enough to take preventive action. 
 
