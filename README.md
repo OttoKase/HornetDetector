@@ -2,6 +2,8 @@
 
 To get images of hornets into /data/hornets, you have to run the following commands. Warning: it may take a long time to download all pictures.
 
+To download pictures of bees, you have to change all places that call hornets in 'download_hornets.py' and then run the script.
+
 ```pip install requests```
 
 ```python scripts/download_hornets.py```
