@@ -1,6 +1,11 @@
 import csv
+import os
+from dotenv import load_dotenv
 
-METADATA_FILE = "data/metadata/hornets_metadata.csv"
+load_dotenv()
+
+BUG_TYPE = os.getenv("BUG_TYPE")
+METADATA_FILE = f"data/metadata/{BUG_TYPE}_metadata.csv"
 
 def inspect_metadata():
     """Inspect the structure and content of the metadata file."""

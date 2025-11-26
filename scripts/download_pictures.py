@@ -4,10 +4,15 @@ import requests
 import time
 from pathlib import Path
 from urllib.parse import urlparse
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 # Configuration
-OUTPUT_DIR = "data/hornets"
-METADATA_FILE = "data/metadata/hornets_metadata.csv"
+BUG_TYPE = os.getenv("BUG_TYPE")
+OUTPUT_DIR = f"data/{BUG_TYPE}"
+METADATA_FILE = f"data/metadata/{BUG_TYPE}_metadata.csv"
 
 # License types to allow (permissive and non-commercial licenses)
 # These are URL patterns from license URLs

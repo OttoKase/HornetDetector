@@ -2,3 +2,5 @@ data/hornets/
 data/bees/
 data/metadata/0020318-251025141854904
 data/metadata/0026230-251025141854904
+.env
+project-hornet-detection-*/
