@@ -1,0 +1,6 @@
+
+train: /content/project-hornet-detection-4/labelled/images
+val: /content/project-hornet-detection-4/labelled/images
+
+nc: 1
+names: ["hornet"]
