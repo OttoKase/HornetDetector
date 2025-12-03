@@ -1,5 +1,7 @@
 roboflow
-requests            # to run download_pictures.py script
-ultralytics         # if using YOLOv8, then might be necessary?
-python-dotenv       # to use .env data in .py files
-gdown               # to download pictures from google drive
+requests                    # to run download_pictures.py script
+ultralytics                 # if using YOLOv8, then might be necessary?
+python-dotenv               # to use .env data in .py files
+google-api-python-client    # to download from google
+google-auth-httplib2
+google-auth-oauthlib

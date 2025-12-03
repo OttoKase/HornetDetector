@@ -5,3 +5,4 @@ data/metadata/0026230-251025141854904
 .env
 project-hornet-detection-*/
 data/images/drive/
+credentials.json
