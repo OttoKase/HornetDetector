@@ -8,7 +8,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
 # Configuration
 BUG_TYPE = os.getenv("BUG_TYPE")
 OUTPUT_DIR = f"data/{BUG_TYPE}"

@@ -16,19 +16,27 @@ The next step is to copy the example .env file and add any necessary API keys to
 
 To get images of bees and/or hornets, you have to run the following script. Warning: it may take a long time to download all pictures. If you stop the script at one point, and then reactivate it later, it will begin where it was last stopped.
 
-```python scripts/download_hornets.py```
+```python scripts/unlabelled_data_download/download_from_roboflow.py```
 
 To change which type of bugs you want to download, you have to change the 'BUG_TYPE' variable in the .env file. Only 'bees' and 'hornets' are valid.
 
 The pictures were downloaded from GBIF.org (06 November 2025) GBIF Occurrence Download  https://doi.org/10.15468/dl.g79yt3.
 
-### Labelled picture download
+### Manually labelled picture download
 
 To download labelled pictures, you need to insert you Roboflow API into the .env file. This can be found in Roboflow Settings -> Workspaces -> hornets -> API Keys or using [this link](https://app.roboflow.com/hornets-kfaxc/settings/api). There should be a **Private API Key** that can be copied.
 
 After the API Key has been inserted you can just run the script that downloads labelled pictures. The version can easily be changed in the script in the ```version = project.version(5)``` row. This should download the pictures into a folder named ***project-hornet-detection-5*** that has data in train-test-val folders in YOLOv8 format.
 
-```python models/download_labelled_data.py```
+```python scripts/labelled_data_download/download_from_roboflow.py```
+
+### Automatically labelled picture download
+
+To download pictures that were labelled by Roboflow, you need to run the following script. This currently downloads everything that is inside the folder specified in .env into a folder named '/drive' (should be named/moved to a better folder).
+
+DOESN'T WORK RIGHT NOW!!
+
+```python scripts/labelled_data_download/download_from_drive.py```
 
 ## Task description
 Problem statement: 
