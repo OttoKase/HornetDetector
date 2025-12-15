@@ -32,6 +32,19 @@ After the API Key has been inserted you can just run the script that downloads l
 
 ### Automatically labelled picture download
 
+There are two options on how to download the data:
+
+1) Manually downloading the folders from Drive and inserting them to the specified folder
+2) Using the script 'download_from_drive';
+
+#### Manually downloading
+
+To download manually, you just have to go to the [specified folder](https://drive.google.com/drive/folders/1xACUQA76mMAXFx6LChjpo768Bej6PvYO) and download everything inside 'labels' and 'images'. The download should take a couple of minutes and after that you can insert them to 'project-hornet-detection-5/train'. This method takes all images and doesn't skip those that don't have a label.
+
+#### Using the script
+
+The script downloads the images slower (up to 30 minutes), but takes out images that don't have a label. The images are at first downloaded into data/images/drive/roboflow or data/images/drive/top-down folder but they can be moved to the necessary location.
+
 Before running the script, you must obtain a **Service Account JSON key** file named ```credentials.json``` and place it in the root of your project directory.
 
 **How to Generate ```credentials.json```?**
@@ -48,6 +61,14 @@ Inside your .env file, you must specify the Folder code for the dataset you wish
 To get the pictures into specified folders in .env file, you need to run the following script. The script has resume functionality, which means that when stopped and rerun, it will begin where it last left off.
 
 ```python scripts/data_download/download_from_drive.py```
+
+**Moving images**
+
+If you have downloaded the images into 'roboflow' folder then you can easily move them into 'project-hornet-detection-5' folder, which contains the training data.
+
+```mv data/images/drive/roboflow/images/* project-hornet-detection-5/train/images/```
+
+```mv data/images/drive/roboflow/labels/* project-hornet-detection-5/train/labels/```
 
 ## Task description
 
